@@ -26,7 +26,7 @@
       };
     },
     async mounted() {
-      this.stripe = await loadStripe("pk_test_51QbliuP2kqOTkjJT3GygobjbmldAEROcxv6O1bpIll6dyDgNRp9d3YJkv84Rp4VQLgXPIwyoTIRoZTxI6BWXgJzf00buCH8JRw"); // Replace with your Stripe public key
+      this.stripe = await loadStripe("pk_test_"); // Replace with your Stripe public key
       this.elements = this.stripe.elements();
       this.card = this.elements.create("card");
       this.card.mount("#card-element");

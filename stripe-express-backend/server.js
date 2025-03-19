@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require("cors");
 const app = express();
-const stripe = require('stripe')('sk_test_51QbliuP2kqOTkjJTpRyqqpDDSPmEdY6ZIE6XWxXVwZnLAXKpUSMNp7GhNKuVuRJWDr4hFoLwGHIQeKhDZKVzciAl004XiNJL3q'); // Replace with your test secret key
+const stripe = require('stripe')('sk_test_'); // Replace with your test secret key
 
 app.use(
     cors({
