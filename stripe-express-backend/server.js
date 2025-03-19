@@ -1,7 +1,17 @@
 // server.js
 const express = require('express');
+const cors = require("cors");
 const app = express();
 const stripe = require('stripe')('sk_test_51QbliuP2kqOTkjJTpRyqqpDDSPmEdY6ZIE6XWxXVwZnLAXKpUSMNp7GhNKuVuRJWDr4hFoLwGHIQeKhDZKVzciAl004XiNJL3q'); // Replace with your test secret key
+
+app.use(
+    cors({
+      origin: "http://localhost:5173", // Allow requests from your Vue app
+      methods: "GET,POST",
+      allowedHeaders: "Content-Type",
+    })
+);
+
 
 // Middleware to parse JSON bodies
 app.use(express.json());
